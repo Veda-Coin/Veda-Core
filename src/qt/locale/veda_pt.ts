@@ -3654,8 +3654,8 @@ https://www.transifex.com/projects/p/veda/</translation>
         <translation>Aviso: Por favor verifique que a data e a hora do computador está correcta! Se o relógio estiver errado o Veda Core não vai funcionar correctamente.</translation>
     </message>
     <message>
-        <source>(21967 could be used only on mainnet)</source>
-        <translation>(21967 apenas pode ser usado para mainnet)</translation>
+        <source>(21966 could be used only on mainnet)</source>
+        <translation>(21966 apenas pode ser usado para mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -4064,8 +4064,8 @@ https://www.transifex.com/projects/p/veda/</translation>
         <translation>masternodeprivkey inválida. Por favor reveja a documentação.</translation>
     </message>
     <message>
-        <source>(must be 21967 for mainnet)</source>
-        <translation>(deve ser 21967 para mainnet)</translation>
+        <source>(must be 21966 for mainnet)</source>
+        <translation>(deve ser 21966 para mainnet)</translation>
     </message>
     <message>
         <source>Can't find random Masternode.</source>

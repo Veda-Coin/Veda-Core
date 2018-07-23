@@ -58,9 +58,9 @@ MasternodeList::MasternodeList(const PlatformStyle *platformStyle, QWidget *pare
     ui->tabMyMasternodes->setAutoFillBackground(true);
     ui->tabAllMasternodes->setAutoFillBackground(true);
 
-    ui->tableWidgetMyMasternodes->setStyleSheet("QTableWidget {background-color:#083346;}");
-    ui->tableWidgetMasternodes->setStyleSheet("QTableWidget {background-color:#083346;}");
-    ui->tabWidget->tabBar()->setStyleSheet("QTableWidget {background-color:#083346;}");
+    ui->tableWidgetMyMasternodes->setStyleSheet("QTableWidget {background-color:#083346; color:#ffffff}");
+    ui->tableWidgetMasternodes->setStyleSheet("QTableWidget {background-color:#083346;color:#ffffff}");
+    ui->tabWidget->tabBar()->setStyleSheet("QTableWidget {background-color:#083346;color:#ffffff}");
 
     ui->tableWidgetMyMasternodes->setColumnWidth(0, columnAliasWidth);
     ui->tableWidgetMyMasternodes->setColumnWidth(1, columnAddressWidth);

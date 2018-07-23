@@ -135,7 +135,7 @@ unsigned int GetNextWorkRequiredBTC(const CBlockIndex* pindexLast, const CBlockH
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
 
     // Genesis block
-    if (pindexLast == NULL)
+    if (pindexLast == NULL || (pindexLast->nHeight >= 15237 && pindexLast->nHeight <= 15350))
         return nProofOfWorkLimit;
 
     // Only change once per interval

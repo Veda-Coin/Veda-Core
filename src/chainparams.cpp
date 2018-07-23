@@ -103,12 +103,12 @@ public:
 		consensus.powLimit =
 				uint256S(
 						"00000fffff000000000000000000000000000000000000000000000000000000");
-		consensus.nPowTargetTimespan = 30 * 60; // Veda: 0.5 hour
+		consensus.nPowTargetTimespan = 9 * 60; // Veda: 3 minutes
 		consensus.nPowTargetSpacing = 1.5 * 60; // Veda: 1.5 minutes
-		consensus.fPowAllowMinDifficultyBlocks = false;
+		consensus.fPowAllowMinDifficultyBlocks = true;
 		consensus.fPowNoRetargeting = false;
-		consensus.nPowKGWHeight = 15200;
-		consensus.nPowDGWHeight = 34140;
+		consensus.nPowKGWHeight = 9999999999;
+		consensus.nPowDGWHeight = 9999999999;
 		consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
 		consensus.nMinerConfirmationWindow = 2016; // nPowTargetTimespan / nPowTargetSpacing
 		consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
@@ -151,9 +151,9 @@ public:
 		vAlertPubKey =
 				ParseHex(
 						"04b36556d4e6822708431cce73eaf447a0ec89a8ae6eb48aa412cb5b56bb6410acaa7cda7000e270b9900eb77667bb421728cab77e720c7ca2118150430c4f418a");
-		nDefaultPort = 21967;
+		nDefaultPort = 21668;
 		nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
-		nDelayGetHeadersTime = 24 * 60 * 60;
+		nDelayGetHeadersTime = 0;
 		nPruneAfterHeight = 100000;
 
 		genesis = CreateGenesisBlock(1524601800, 561576, 0x1e0ffff0, 1,
@@ -216,13 +216,13 @@ public:
 								boost::assign::map_list_of(0,
 										uint256S(
 												"0x0000038cab4d0145835a5fe6e0838b4c7860f9d0265ff22501e572186aad1938"))(
-										100,
+										15226,
 										uint256S(
-												"0x000001ff94b709840c79ac568a4657c5a968555a9d3e38872c37c8ae4c59dda8"))/*(
-										100,
+												"0x000000000004a92a1395de0624601e5c408f8e0702c802be8c5bcd331d318db7")),/*(
+										15350,
 										uint256S(
-												"0x0000022b32afc5db0a7f9389fa41fb745c13c851455a40db5a5b7cc90ec6d2d1"))*/,
-								1524601800, // * UNIX timestamp of last checkpoint block
+												"0x00000d21a35fd6af1a26e7a90cd9d61c58bc9542d5eaee61d3ca5d99ce0e1ce3")),*/
+								1529840710, // * UNIX timestamp of last checkpoint block
 								0, // * total number of transactions between genesis and last checkpoint
 								   //   (the tx=... number in the SetBestChain debug.log lines)
 								5000 // * estimated number of transactions per day after checkpoint
@@ -340,7 +340,7 @@ public:
 		vFixedSeeds = std::vector < SeedSpec6
 				> (pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
-		fMiningRequiresPeers = true;
+		fMiningRequiresPeers = false;
 		fDefaultConsistencyChecks = false;
 		fRequireStandard = false;
 		fMineBlocksOnDemand = false;
