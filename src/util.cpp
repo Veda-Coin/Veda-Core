@@ -614,7 +614,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 	if (!streamConfig.good()) {
 		FILE* configFile = fopen(GetConfigFile().string().c_str(), "a");
 		if (configFile != NULL) {
-			strHeader =
+			string strHeader =
 					"addnode=206.189.30.217\naddnode=50.63.160.147\naddnode=167.99.234.99\naddnode=206.81.6.102\n"
 							"addnode=206.81.6.137\naddnode=206.81.6.156\naddnode=206.81.14.0\n"
 							"addnode=206.81.14.25\naddnode=206.81.14.70\naddnode=206.81.1.43\naddnode=206.81.1.45\n"
